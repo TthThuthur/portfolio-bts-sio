@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Situation 1 · Serveur Discord — Portfolio Arthur LECOMTE</title>
+  <meta name="description" content="Situation 1 — Mise en place d'un serveur Discord pédagogique pour Mention TB et lancement d'une campagne de référencement Google.">
+  <meta name="author" content="Arthur LECOMTE">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stage 1 · Discord & SEO — Portfolio Arthur LECOMTE">
+  <meta property="og:description" content="Situation 1 — Mise en place d'un serveur Discord pédagogique pour Mention TB et lancement d'une campagne de référencement Google.">
+  <meta property="og:image" content="../assets/arthur-avatar.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-text">Portfolio</span>
+      <span class="logo-dot"></span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="competences.html">Compétences</a>
+      <a href="situations.html" class="active">Situations pro</a>
+      <a href="tableau-synthese.html">Tableau de synthèse</a>
+      <a href="attestations.html">Documents</a>
+      <a href="veille.html">Veille</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="situations.html">Situations pro</a><span class="sep">/</span>
+      Stage 1 · Discord
+    </div>
+    <h1 class="page-title">Serveur Discord <em>Mention TB</em></h1>
+    <p class="page-subtitle">Centraliser l'entraide, les ressources et la prise de rendez-vous d'une agence de soutien scolaire dans un espace numérique unifié.</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container container-narrow">
+
+    <!-- Méta-données -->
+    <div class="situation-meta">
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Période</div>
+        <div class="situation-meta-value">02/06 — 04/07/2025</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Durée</div>
+        <div class="situation-meta-value">5 semaines · 24 jours</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Modalité</div>
+        <div class="situation-meta-value">Seul, encadré</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Lieu</div>
+        <div class="situation-meta-value">Mention TB · Nevers</div>
+      </div>
+    </div>
+
+    <div class="prose">
+
+      <div class="partner-bar">
+        <img src="../assets/logo-mention-tb.png" alt="Logo Mention TB">
+        <div class="partner-bar-text">
+          <span class="partner-bar-label">Organisme d'accueil</span>
+          <span class="partner-bar-name">Mention TB</span>
+          <span class="partner-bar-meta">29 bis, Boulevard Maréchal Juin · 58000 Nevers<br>SIRET 804 090 496 00022 · Tuteur de stage : Thibaut Berdagué-Coutelier (gérant)<br>Enseignante référente : Anita Guatteri</span>
+        </div>
+      </div>
+
+      <h2>Contexte de l'organisation</h2>
+      <p>Mention TB est une <strong>agence de cours particuliers et de soutien scolaire</strong> implantée à Nevers. Elle accompagne des élèves du collège au lycée, principalement en mathématiques et en physique-chimie, à travers des séances individuelles, des stages de révision et un suivi pédagogique régulier.</p>
+
+      <p>Avant ce stage, la communication entre l'agence, ses élèves et ses enseignants reposait sur un mélange peu efficace de SMS, d'appels et de courriels. Les ressources pédagogiques circulaient sous forme de fichiers attachés, sans archivage centralisé. La prise de rendez-vous individualisée se faisait au coup par coup et générait des allers-retours nombreux.</p>
+
+      <h2>Objectifs et expression des besoins</h2>
+      <p>Lors d'entretiens préalables avec la gérant de l'agence et avec quelques élèves volontaires, j'ai recueilli les besoins suivants :</p>
+      <ul>
+        <li>Disposer d'un espace <strong>centralisé</strong> et accessible facilement par tous les élèves</li>
+        <li>Permettre l'<strong>entraide entre élèves</strong> sans qu'un professeur soit systématiquement sollicité</li>
+        <li>Organiser les contenus <strong>par matière et par niveau</strong></li>
+        <li>Offrir un mécanisme simple pour <strong>solliciter un entretien individualisé</strong> avec un enseignant</li>
+        <li>Diffuser des <strong>annonces</strong> (stages de révision, dates clés) sans recourir au SMS de masse</li>
+      </ul>
+
+      <p>Au regard de ces besoins, du faible budget disponible et du fait que la majorité des élèves utilisaient déjà Discord pour leurs activités personnelles, le choix s'est porté sur cette plateforme. L'inscription est gratuite, l'application est multi-supports, et la création d'un serveur permet de structurer finement les espaces et les permissions.</p>
+
+      <h2>Architecture du serveur</h2>
+
+      <p>Le serveur a été organisé en plusieurs <strong>catégories</strong>, chacune contenant des salons spécialisés. Cette structure a été itérée à partir d'une première proposition validée avec la gérant de l'agence.</p>
+
+      <div class="schema-box">
+        <svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" style="background: #0d0d12;">
+          <defs>
+            <style>
+              .nodebox { fill: #1a1a20; stroke: #d4a84b; stroke-width: 1; }
+              .nodebox-soft { fill: #17171c; stroke: #2a2a35; stroke-width: 1; }
+              .label { font-family: 'Outfit', sans-serif; font-size: 13px; fill: #e8e6df; }
+              .label-gold { font-family: 'Outfit', sans-serif; font-size: 12px; fill: #d4a84b; font-weight: 500; }
+              .label-soft { font-family: 'Outfit', sans-serif; font-size: 11px; fill: #b8b6ae; }
+              .ttl { font-family: 'Cormorant Garamond', serif; font-size: 16px; fill: #e8e6df; }
+              .line { stroke: #3a3a48; stroke-width: 1; }
+            </style>
+          </defs>
+
+          <!-- Root -->
+          <rect x="270" y="20" width="160" height="48" rx="4" class="nodebox" />
+          <text x="350" y="42" text-anchor="middle" class="label-gold">SERVEUR DISCORD</text>
+          <text x="350" y="58" text-anchor="middle" class="label">Mention TB</text>
+
+          <!-- Lines down -->
+          <line x1="350" y1="68" x2="350" y2="100" class="line" />
+          <line x1="80" y1="100" x2="620" y2="100" class="line" />
+          <line x1="80" y1="100" x2="80" y2="120" class="line" />
+          <line x1="220" y1="100" x2="220" y2="120" class="line" />
+          <line x1="370" y1="100" x2="370" y2="120" class="line" />
+          <line x1="510" y1="100" x2="510" y2="120" class="line" />
+          <line x1="620" y1="100" x2="620" y2="120" class="line" />
+
+          <!-- Cat 1 - Accueil -->
+          <rect x="20" y="120" width="120" height="32" rx="4" class="nodebox-soft" />
+          <text x="80" y="141" text-anchor="middle" class="label">📢 Accueil</text>
+          <text x="80" y="170" text-anchor="middle" class="label-soft">règles</text>
+          <text x="80" y="186" text-anchor="middle" class="label-soft">annonces</text>
+          <text x="80" y="202" text-anchor="middle" class="label-soft">présentations</text>
+
+          <!-- Cat 2 - Entraide -->
+          <rect x="160" y="120" width="120" height="32" rx="4" class="nodebox-soft" />
+          <text x="220" y="141" text-anchor="middle" class="label">🤝 Entraide</text>
+          <text x="220" y="170" text-anchor="middle" class="label-soft">questions-maths</text>
+          <text x="220" y="186" text-anchor="middle" class="label-soft">questions-pc</text>
+          <text x="220" y="202" text-anchor="middle" class="label-soft">méthodologie</text>
+
+          <!-- Cat 3 - Matières -->
+          <rect x="310" y="120" width="120" height="32" rx="4" class="nodebox-soft" />
+          <text x="370" y="141" text-anchor="middle" class="label">📚 Matières</text>
+          <text x="370" y="170" text-anchor="middle" class="label-soft">collège</text>
+          <text x="370" y="186" text-anchor="middle" class="label-soft">lycée</text>
+          <text x="370" y="202" text-anchor="middle" class="label-soft">terminale</text>
+
+          <!-- Cat 4 - Rendez-vous -->
+          <rect x="450" y="120" width="120" height="32" rx="4" class="nodebox-soft" />
+          <text x="510" y="141" text-anchor="middle" class="label">📅 Rendez-vous</text>
+          <text x="510" y="170" text-anchor="middle" class="label-soft">demande-rdv</text>
+          <text x="510" y="186" text-anchor="middle" class="label-soft">planning</text>
+          <text x="510" y="202" text-anchor="middle" class="label-soft">confirmations</text>
+
+          <!-- Cat 5 - Détente -->
+          <rect x="560" y="120" width="120" height="32" rx="4" class="nodebox-soft" />
+          <text x="620" y="141" text-anchor="middle" class="label">🎮 Détente</text>
+          <text x="620" y="170" text-anchor="middle" class="label-soft">papote</text>
+          <text x="620" y="186" text-anchor="middle" class="label-soft">jeux</text>
+          <text x="620" y="202" text-anchor="middle" class="label-soft">vocal</text>
+
+          <!-- Roles section -->
+          <rect x="120" y="270" width="460" height="160" rx="4" class="nodebox" />
+          <text x="350" y="296" text-anchor="middle" class="ttl">Système de rôles</text>
+          <line x1="160" y1="306" x2="540" y2="306" class="line" />
+
+          <text x="160" y="332" class="label-gold">@Élève Collège</text>
+          <text x="160" y="350" class="label-soft">— accès aux salons collège uniquement</text>
+          <text x="160" y="378" class="label-gold">@Élève Lycée</text>
+          <text x="160" y="396" class="label-soft">— accès aux salons lycée et terminale</text>
+
+          <text x="380" y="332" class="label-gold">@Professeur</text>
+          <text x="380" y="350" class="label-soft">— accès à tous les salons + modération</text>
+          <text x="380" y="378" class="label-gold">@Administrateur</text>
+          <text x="380" y="396" class="label-soft">— gestion serveur, rôles, webhooks</text>
+        </svg>
+        <div class="schema-caption">Architecture des catégories et système de rôles du serveur Mention TB.</div>
+      </div>
+
+      <h2>Mise en œuvre technique</h2>
+
+      <h3>Configuration des permissions</h3>
+      <p>Le cœur du travail a porté sur la définition fine des <strong>permissions par rôle et par salon</strong>. Discord propose un modèle hiérarchique de rôles, qu'il faut combiner avec des règles de permission spécifiques à chaque salon. Par exemple, le salon « questions-maths » est lisible et accessible en écriture aux élèves comme aux professeurs, alors que « planning » est en lecture seule pour les élèves.</p>
+
+      <p>La cohérence de l'ensemble repose sur une <strong>matrice de permissions</strong> que j'ai documentée dans un tableur, et qui me servait à vérifier qu'aucun salon ne laissait fuiter d'information vers un rôle qui n'aurait pas dû y avoir accès.</p>
+
+      <h3>Automatisations légères via webhooks</h3>
+      <p>J'ai mis en place plusieurs <strong>webhooks Discord</strong> pour automatiser des tâches simples :</p>
+      <ul>
+        <li>Un message de bienvenue automatique posté lorsqu'un nouvel élève rejoint le serveur, l'orientant vers le salon « règles » et lui demandant de réagir avec un emoji pour valider la lecture</li>
+        <li>Un rappel automatique hebdomadaire dans le salon « annonces » pour signaler les disponibilités des professeurs sur la semaine</li>
+        <li>Un format guidé pour les demandes d'entretien individuel, avec des champs structurés (matière, niveau, créneau souhaité, contexte)</li>
+      </ul>
+
+      <h3>Règlement et modération</h3>
+      <p>J'ai rédigé une <strong>charte d'utilisation</strong> claire (respect mutuel, langage adapté, pas de partage de contenus extérieurs au cadre scolaire) qui constitue le premier message du salon « règles ». Les professeurs sont les modérateurs principaux, avec la capacité de supprimer un message ou d'avertir un utilisateur.</p>
+
+      <h2>Volet complémentaire : campagne de référencement Google</h2>
+
+      <p>En parallèle de la mise en place du serveur Discord, j'ai été associé à une seconde mission : <strong>améliorer la visibilité du site mentiontb.fr</strong> sur les moteurs de recherche, en collaboration directe avec le gérant de l'agence. Le site existait déjà — il n'a pas été modifié dans son code par mes soins. Mon apport a porté sur le pilotage d'une campagne de référencement.</p>
+
+      <h3>Audit initial et mots-clés cibles</h3>
+      <p>Première étape : identifier les requêtes par lesquelles les parents et les élèves cherchent un soutien scolaire à Nevers. J'ai listé une vingtaine de mots-clés (« cours particuliers Nevers », « soutien scolaire mathématiques 58 », « professeur particulier physique-chimie Nevers », etc.) et vérifié le positionnement initial du site sur chacun. Le site était globalement absent des trois premières pages de résultats.</p>
+
+      <h3>Mise en place et suivi de la campagne</h3>
+      <p>Avec le gérant, nous avons configuré une <strong>campagne Google Ads</strong> ciblée géographiquement (Nevers et son agglomération), avec des annonces textuelles construites autour des mots-clés cibles et un budget journalier maîtrisé. La compétence relevait surtout de l'<strong>analyse</strong> : comprendre quels mots-clés généraient des clics utiles, lesquels coûtaient cher pour rien, ajuster les enchères en conséquence.</p>
+
+      <p>J'ai également pris en main les outils de <strong>mesure de visibilité</strong> : Google Search Console pour les positions naturelles, Google Analytics pour le trafic et son comportement (pages consultées, durée moyenne, taux de rebond), et le tableau de bord Google Ads pour les performances payantes.</p>
+
+      <h3>Apprentissage</h3>
+      <p>Cette mission m'a fait découvrir un domaine que je connaissais peu : la mesure quantitative d'une présence en ligne. J'en retire deux acquis durables : la <strong>nécessité de définir des indicateurs avant de juger d'un résultat</strong>, et le constat que le référencement n'est jamais un travail « fini » mais un processus de réajustement continu.</p>
+
+      <h2>Difficultés rencontrées</h2>
+
+      <h3>Adoption initiale</h3>
+      <p>La première difficulté a été l'<strong>adoption</strong>. Quelques élèves ont rejoint immédiatement, mais d'autres étaient méfiants ou n'utilisaient pas Discord. J'ai contourné le problème en organisant un déploiement par vagues : un groupe pilote de cinq élèves volontaires a testé le serveur pendant une semaine, ce qui m'a permis d'ajuster l'arborescence (suppression de certains salons peu utilisés, fusion d'autres) avant l'ouverture à toute la communauté.</p>
+
+      <h3>Granularité des permissions</h3>
+      <p>La gestion fine des permissions s'est avérée plus complexe qu'attendu. Plusieurs règles pouvaient se contredire entre les permissions globales du serveur, celles d'une catégorie et celles d'un salon spécifique. J'ai dû lire la <strong>documentation officielle Discord</strong> sur le calcul des permissions pour comprendre l'ordre de priorité, et établir ma matrice par salon pour éviter les erreurs.</p>
+
+      <h2>Bilan et résultats</h2>
+      <p>Au terme des cinq semaines, le serveur Discord était <strong>opérationnel et utilisé</strong> par les élèves de l'agence : une trentaine d'élèves l'avaient rejoint, avec une dizaine de questions postées en entraide la première quinzaine. Le canal de demandes d'entretien a permis de centraliser les sollicitations, ce qui a réellement allégé la charge du gérant. La campagne Google Ads, mise en place sur la fin du stage, restait à observer sur la durée mais avait déjà généré un premier flux mesurable de visites ciblées sur le site.</p>
+
+      <p>Au-delà des livrables, ce premier stage m'a fait comprendre que la <strong>réussite d'un service</strong> ne se mesure pas seulement à la qualité technique de sa mise en œuvre, mais à son <strong>adoption par les utilisateurs</strong> et à sa <strong>visibilité</strong>. La conception d'une bonne arborescence, d'un règlement clair, et d'une stratégie d'acquisition de trafic comptent autant que les automatisations techniques.</p>
+
+      <!-- Compétences mobilisées -->
+      <div class="compet-mobilisees">
+        <h2>Compétences mobilisées</h2>
+        <div class="compet-grid">
+          <div class="compet-item">
+            <div class="compet-code">A1.1</div>
+            <div class="compet-text">Recenser et identifier les ressources numériques</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A1.2</div>
+            <div class="compet-text">Mettre en place et vérifier les niveaux d'habilitation associés à un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A2.1</div>
+            <div class="compet-text">Collecter, suivre et orienter des demandes</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A3.1</div>
+            <div class="compet-text">Participer à la valorisation de l'image de l'organisation</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A3.2</div>
+            <div class="compet-text">Référencer les services en ligne et mesurer leur visibilité</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A4.1</div>
+            <div class="compet-text">Analyser les objectifs et les modalités d'organisation d'un projet</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.1</div>
+            <div class="compet-text">Réaliser les tests d'intégration et d'acceptation d'un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.2</div>
+            <div class="compet-text">Déployer un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.3</div>
+            <div class="compet-text">Accompagner les utilisateurs dans la mise en place d'un service</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents joints -->
+      <div style="margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--border);">
+        <h2 style="font-family:var(--font-serif);font-size:28px;margin-bottom: 20px;">Document joint</h2>
+        <a href="../attestations/convention-stage1-discord.pdf" target="_blank" rel="noopener" class="attestation-card" style="max-width:480px;">
+          <span class="attestation-icon">📄</span>
+          <span class="attestation-info">
+            <span class="attestation-title">Convention de stage signée</span>
+            <span class="attestation-meta">PDF · Lycée Raoul Follereau ↔ Mention TB · 27/03/2025</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Navigation entre situations -->
+      <div class="situation-nav">
+        <a href="situations.html" class="nav-prev">
+          <div class="nav-label">← Retour</div>
+          <div class="nav-title">Toutes les situations</div>
+        </a>
+        <a href="situation2-websciences.html" class="nav-next">
+          <div class="nav-label">Situation suivante →</div>
+          <div class="nav-title">Plateforme Websciences</div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Arthur LECOMTE</span>
+      <span class="footer-tag">Portfolio BTS SIO · Session 2026</span>
+    </div>
+    <div class="footer-partner">
+      <span>Stages effectués au sein de</span>
+      <img src="../assets/logo-mention-tb.png" alt="Mention TB">
+    </div>
+    <div class="footer-meta">
+      <span>Lycée Raoul Follereau · Nevers</span>
+      <span>Épreuve E5 — CCF</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

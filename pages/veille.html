@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille technologique — Portfolio Arthur LECOMTE</title>
+  <meta name="description" content="Veille technologique sur la sécurité du développement web : OWASP, ANSSI, CERT-FR, et impact concret sur mes choix techniques.">
+  <meta name="author" content="Arthur LECOMTE">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Veille technologique — Portfolio Arthur LECOMTE">
+  <meta property="og:description" content="Veille technologique sur la sécurité du développement web : OWASP, ANSSI, CERT-FR, et impact concret sur mes choix techniques.">
+  <meta property="og:image" content="../assets/arthur-avatar.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-text">Portfolio</span>
+      <span class="logo-dot"></span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="competences.html">Compétences</a>
+      <a href="situations.html">Situations pro</a>
+      <a href="tableau-synthese.html">Tableau de synthèse</a>
+      <a href="attestations.html">Documents</a>
+      <a href="veille.html" class="active">Veille</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>Veille technologique
+    </div>
+    <h1 class="page-title">Veille <em>technologique</em></h1>
+    <p class="page-subtitle">Sujet de veille, sources mobilisées et impact concret sur mes choix techniques au cours du BTS.</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container container-narrow">
+    <div class="prose">
+
+      <h2>Sujet de veille</h2>
+      <p>J'ai choisi de concentrer ma veille sur la <strong>sécurité du développement web</strong>, et plus spécifiquement sur les <strong>vulnérabilités applicatives</strong> qui touchent les sites bâtis avec PHP et MySQL : injections SQL, XSS, gestion des sessions, stockage des mots de passe.</p>
+
+      <p>Ce choix répond à trois motivations :</p>
+      <ul>
+        <li>La sécurité applicative est un sujet <strong>central et durable</strong> du métier de développeur, pas une mode passagère</li>
+        <li>Elle a un <strong>impact direct</strong> sur mon stage de deuxième année (Websciences manipule des comptes utilisateurs et des contenus à accès restreint)</li>
+        <li>C'est un domaine où la <strong>veille n'est pas optionnelle</strong> : les vulnérabilités évoluent et de nouvelles classes d'attaques apparaissent régulièrement</li>
+      </ul>
+
+      <h2>Méthodologie</h2>
+      <p>Ma veille combine plusieurs sources de natures différentes pour croiser les regards et limiter le risque d'information biaisée :</p>
+
+      <h3>Sources institutionnelles</h3>
+      <ul>
+        <li><strong>OWASP</strong> (<em>Open Worldwide Application Security Project</em>) : référence mondiale sur la sécurité applicative web, en particulier le classement OWASP Top 10 des vulnérabilités les plus critiques, mis à jour régulièrement</li>
+        <li><strong>ANSSI</strong> (<em>Agence nationale de la sécurité des systèmes d'information</em>) : guides et recommandations officielles publiés en France, dont le guide de bonnes pratiques de développement web</li>
+        <li><strong>CERT-FR</strong> : alertes de sécurité publiées par le Centre gouvernemental de veille</li>
+      </ul>
+
+      <h3>Documentation officielle</h3>
+      <ul>
+        <li><strong>php.net</strong> : la documentation de référence de PHP, avec en particulier les sections sur PDO, password_hash et les sessions</li>
+        <li><strong>MDN Web Docs</strong> (Mozilla) pour les bonnes pratiques HTML, CSS et JavaScript côté client</li>
+      </ul>
+
+      <h3>Médias spécialisés et blogs</h3>
+      <ul>
+        <li><strong>Le journal du hacker</strong> et <strong>Korben.info</strong> pour une veille francophone régulière sur les actualités sécurité</li>
+        <li><strong>Stack Overflow</strong> et les blogs des éditeurs (Cloudflare, GitHub) pour les retours d'expérience pratiques</li>
+      </ul>
+
+      <h3>Outillage</h3>
+      <p>Je suis ces sources via un <strong>agrégateur RSS</strong> (Inoreader), qui me permet de centraliser les nouveaux articles. J'utilise également un système de marque-pages thématiques pour archiver les ressources les plus utiles, et je tiens un petit carnet personnel où je consigne, pour chaque sujet, les points marquants et les questions ouvertes.</p>
+
+      <h2>Synthèse personnelle</h2>
+
+      <h3>Ce que j'ai retenu — les invariants</h3>
+
+      <p>Quelques principes reviennent systématiquement quel que soit le sujet précis :</p>
+      <ol>
+        <li><strong>Ne jamais faire confiance aux entrées utilisateur.</strong> Toute donnée provenant du navigateur doit être validée et échappée selon le contexte de sortie (HTML, SQL, shell, JSON…)</li>
+        <li><strong>Préférer les protections par défaut aux vérifications ad-hoc.</strong> Une requête préparée protège mieux qu'un échappement manuel, parce qu'elle ne dépend pas de la mémoire du développeur</li>
+        <li><strong>Limiter la surface d'attaque.</strong> Moins une fonctionnalité expose de paramètres, moins elle a de chances d'être détournée</li>
+        <li><strong>Logger et observer.</strong> La détection d'une attaque dépend de la capacité à voir ce qui se passe, donc à conserver des journaux exploitables</li>
+      </ol>
+
+      <h3>Trois sujets approfondis</h3>
+
+      <p><strong>Les injections SQL.</strong> Encore en 2026, c'est l'une des trois premières causes de fuite de données sur le web. La protection est pourtant techniquement triviale via les requêtes préparées. La leçon que j'en tire est que la difficulté n'est pas technique mais culturelle : il faut adopter le réflexe systématique, sans exception, de ne jamais concaténer une variable dans une requête.</p>
+
+      <p><strong>Le stockage des mots de passe.</strong> J'ai été frappé en lisant les rapports de breaches de la fréquence à laquelle des bases entières circulent en clair ou avec des hachages obsolètes (MD5, SHA1). PHP fournit pourtant <code>password_hash()</code> qui rend le stockage robuste pratiquement gratuit. Sur Websciences, j'ai utilisé cette fonction systématiquement.</p>
+
+      <p><strong>Les sessions.</strong> J'ai consacré du temps à comprendre le fonctionnement réel de <code>$_SESSION</code> en PHP, le rôle des cookies, et les protections contre la fixation et le vol de session (régénération de l'identifiant à la connexion, attribut <code>HttpOnly</code>, expiration). C'est un domaine où l'on peut écrire du code qui « marche » en apparence sans avoir mis en place les protections de base.</p>
+
+      <h2>Impact concret sur mon travail</h2>
+
+      <p>La veille n'est pas une activité décorative. Sur Websciences, elle a directement orienté plusieurs choix :</p>
+
+      <div class="info-box">
+        <div class="info-box-title">PDO avec requêtes préparées partout</div>
+        <p style="margin: 0;">Aucune concaténation directe de variables dans une requête SQL — chaque valeur passe par un paramètre nommé. C'est une décision prise en amont, pas un correctif après-coup.</p>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-title">password_hash et password_verify</div>
+        <p style="margin: 0;">Les mots de passe ne sont jamais stockés ni comparés en clair. Le hachage utilise l'algorithme bcrypt par défaut de PHP, avec un coût adapté.</p>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-title">Contrôle d'accès côté serveur uniquement</div>
+        <p style="margin: 0;">Les ressources premium ne sont servies au navigateur que si le serveur, après vérification de la session, valide le rôle de l'utilisateur. Aucun contrôle ne dépend du JavaScript ou d'un paramètre côté client manipulable.</p>
+      </div>
+
+      <h2>Perspective</h2>
+
+      <p>Cette veille m'a fait prendre conscience que la sécurité applicative est un domaine où le développeur a une <strong>vraie responsabilité morale</strong> : derrière chaque base de données il y a des personnes réelles dont les informations peuvent fuiter, être exploitées, ou nuire. Ce qui pourrait être perçu comme une contrainte technique est en réalité un <strong>devoir professionnel</strong>, et c'est sous cet angle que j'aborde désormais mes choix de conception.</p>
+
+      <p>Pour la suite de mon parcours, je compte élargir ma veille à deux sujets connexes : les <strong>en-têtes de sécurité HTTP</strong> (Content-Security-Policy, Strict-Transport-Security…) et la <strong>conteneurisation</strong> (Docker), qui change la manière dont on isole les composants d'une application en production.</p>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Arthur LECOMTE</span>
+      <span class="footer-tag">Portfolio BTS SIO · Session 2026</span>
+    </div>
+    <div class="footer-partner">
+      <span>Stages effectués au sein de</span>
+      <img src="../assets/logo-mention-tb.png" alt="Mention TB">
+    </div>
+    <div class="footer-meta">
+      <span>Lycée Raoul Follereau · Nevers</span>
+      <span>Épreuve E5 — CCF</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
