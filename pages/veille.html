@@ -43,7 +43,7 @@
       <a href="../index.html">Accueil</a><span class="sep">/</span>Veille technologique
     </div>
     <h1 class="page-title">Veille <em>technologique</em></h1>
-    <p class="page-subtitle">Sujet de veille, sources mobilisées et impact concret sur mes choix techniques au cours du BTS.</p>
+    <p class="page-subtitle">Mon sujet de veille, mes sources, et son application concrète dans mes projets.</p>
   </div>
 </section>
 
@@ -52,84 +52,86 @@
     <div class="prose">
 
       <h2>Sujet de veille</h2>
-      <p>J'ai choisi de concentrer ma veille sur la <strong>sécurité du développement web</strong>, et plus spécifiquement sur les <strong>vulnérabilités applicatives</strong> qui touchent les sites bâtis avec PHP et MySQL : injections SQL, XSS, gestion des sessions, stockage des mots de passe.</p>
+      <p>J'ai choisi de faire ma veille sur la <strong>sécurité du développement web</strong>, et plus précisément sur les attaques classiques contre les sites en PHP/MySQL : injections SQL, XSS, gestion des sessions, mots de passe.</p>
 
-      <p>Ce choix répond à trois motivations :</p>
+      <p>Pourquoi ce sujet :</p>
       <ul>
-        <li>La sécurité applicative est un sujet <strong>central et durable</strong> du métier de développeur, pas une mode passagère</li>
-        <li>Elle a un <strong>impact direct</strong> sur mon stage de deuxième année (Websciences manipule des comptes utilisateurs et des contenus à accès restreint)</li>
-        <li>C'est un domaine où la <strong>veille n'est pas optionnelle</strong> : les vulnérabilités évoluent et de nouvelles classes d'attaques apparaissent régulièrement</li>
+        <li>C'est un fondamental du métier : on l'aborde rapidement en cours dès la première année</li>
+        <li>C'est un sujet qui restera utile longtemps, ce n'est pas une mode passagère</li>
+        <li>En sécurité, il faut continuer à se mettre à jour : de nouvelles vulnérabilités apparaissent régulièrement</li>
       </ul>
 
-      <h2>Méthodologie</h2>
-      <p>Ma veille combine plusieurs sources de natures différentes pour croiser les regards et limiter le risque d'information biaisée :</p>
+      <p>J'ai choisi ce sujet dès la première année du BTS, et il s'est avéré particulièrement utile lors de mon stage de deuxième année sur Websciences, qui gère des comptes utilisateurs et des contenus payants.</p>
+
+      <h2>Mes sources</h2>
+      <p>J'utilise plusieurs types de sources pour croiser les points de vue :</p>
 
       <h3>Sources institutionnelles</h3>
       <ul>
-        <li><strong>OWASP</strong> (<em>Open Worldwide Application Security Project</em>) : référence mondiale sur la sécurité applicative web, en particulier le classement OWASP Top 10 des vulnérabilités les plus critiques, mis à jour régulièrement</li>
-        <li><strong>ANSSI</strong> (<em>Agence nationale de la sécurité des systèmes d'information</em>) : guides et recommandations officielles publiés en France, dont le guide de bonnes pratiques de développement web</li>
-        <li><strong>CERT-FR</strong> : alertes de sécurité publiées par le Centre gouvernemental de veille</li>
+        <li><strong>OWASP</strong> (Open Worldwide Application Security Project) : la référence mondiale sur la sécurité web, avec son célèbre Top 10 des failles les plus critiques</li>
+        <li><strong>ANSSI</strong> (Agence nationale de la sécurité des systèmes d'information) : les guides officiels français, dont les bonnes pratiques pour le développement web</li>
+        <li><strong>CERT-FR</strong> : les alertes de sécurité publiées par l'État</li>
       </ul>
 
       <h3>Documentation officielle</h3>
       <ul>
-        <li><strong>php.net</strong> : la documentation de référence de PHP, avec en particulier les sections sur PDO, password_hash et les sessions</li>
-        <li><strong>MDN Web Docs</strong> (Mozilla) pour les bonnes pratiques HTML, CSS et JavaScript côté client</li>
+        <li><strong>php.net</strong> : la doc de PHP, surtout les pages sur PDO, password_hash et les sessions</li>
+        <li><strong>MDN Web Docs</strong> (Mozilla) pour le HTML, CSS et JavaScript</li>
       </ul>
 
-      <h3>Médias spécialisés et blogs</h3>
+      <h3>Médias spécialisés</h3>
       <ul>
-        <li><strong>Le journal du hacker</strong> et <strong>Korben.info</strong> pour une veille francophone régulière sur les actualités sécurité</li>
-        <li><strong>Stack Overflow</strong> et les blogs des éditeurs (Cloudflare, GitHub) pour les retours d'expérience pratiques</li>
+        <li><strong>Le Journal du Hacker</strong> et <strong>Korben.info</strong> pour suivre l'actualité sécurité en français</li>
+        <li><strong>Stack Overflow</strong> et les blogs techniques (Cloudflare, GitHub) pour des retours d'expérience concrets</li>
       </ul>
 
-      <h3>Outillage</h3>
-      <p>Je suis ces sources via un <strong>agrégateur RSS</strong> (Inoreader), qui me permet de centraliser les nouveaux articles. J'utilise également un système de marque-pages thématiques pour archiver les ressources les plus utiles, et je tiens un petit carnet personnel où je consigne, pour chaque sujet, les points marquants et les questions ouvertes.</p>
+      <h3>Mon outillage</h3>
+      <p>Je centralise tout dans un <strong>agrégateur RSS</strong> (Inoreader), qui me regroupe les nouveaux articles. J'ai aussi des marque-pages classés par thème, et je note dans un carnet ce que je veux retenir et les questions que je me pose.</p>
 
-      <h2>Synthèse personnelle</h2>
+      <h2>Ce que j'en retiens</h2>
 
-      <h3>Ce que j'ai retenu — les invariants</h3>
+      <h3>Quelques règles qui reviennent toujours</h3>
 
-      <p>Quelques principes reviennent systématiquement quel que soit le sujet précis :</p>
+      <p>Quel que soit le sujet précis, certains principes reviennent systématiquement :</p>
       <ol>
-        <li><strong>Ne jamais faire confiance aux entrées utilisateur.</strong> Toute donnée provenant du navigateur doit être validée et échappée selon le contexte de sortie (HTML, SQL, shell, JSON…)</li>
-        <li><strong>Préférer les protections par défaut aux vérifications ad-hoc.</strong> Une requête préparée protège mieux qu'un échappement manuel, parce qu'elle ne dépend pas de la mémoire du développeur</li>
-        <li><strong>Limiter la surface d'attaque.</strong> Moins une fonctionnalité expose de paramètres, moins elle a de chances d'être détournée</li>
-        <li><strong>Logger et observer.</strong> La détection d'une attaque dépend de la capacité à voir ce qui se passe, donc à conserver des journaux exploitables</li>
+        <li><strong>Ne jamais faire confiance aux données qui viennent du navigateur.</strong> Toute donnée envoyée par un utilisateur doit être vérifiée avant d'être utilisée.</li>
+        <li><strong>Privilégier les protections automatiques.</strong> Par exemple, une requête préparée protège mieux qu'un échappement à la main, parce qu'on ne peut pas l'oublier.</li>
+        <li><strong>Limiter ce qu'on expose.</strong> Moins une fonctionnalité a de paramètres, moins il y a de risques qu'elle soit détournée.</li>
+        <li><strong>Garder une trace.</strong> Sans logs, on ne voit pas une attaque arriver et on ne peut pas comprendre ce qui s'est passé.</li>
       </ol>
 
-      <h3>Trois sujets approfondis</h3>
+      <h3>Trois sujets que j'ai creusés</h3>
 
-      <p><strong>Les injections SQL.</strong> Encore en 2026, c'est l'une des trois premières causes de fuite de données sur le web. La protection est pourtant techniquement triviale via les requêtes préparées. La leçon que j'en tire est que la difficulté n'est pas technique mais culturelle : il faut adopter le réflexe systématique, sans exception, de ne jamais concaténer une variable dans une requête.</p>
+      <p><strong>Les injections SQL.</strong> Encore aujourd'hui, c'est une des principales causes de fuites de données. Pourtant, la solution est simple : utiliser des requêtes préparées. Ce que j'en retiens, c'est que ce n'est pas un problème technique mais une question d'habitude : il faut prendre le réflexe de ne jamais mettre une variable directement dans une requête SQL.</p>
 
-      <p><strong>Le stockage des mots de passe.</strong> J'ai été frappé en lisant les rapports de breaches de la fréquence à laquelle des bases entières circulent en clair ou avec des hachages obsolètes (MD5, SHA1). PHP fournit pourtant <code>password_hash()</code> qui rend le stockage robuste pratiquement gratuit. Sur Websciences, j'ai utilisé cette fonction systématiquement.</p>
+      <p><strong>Le stockage des mots de passe.</strong> J'ai lu plusieurs rapports sur des fuites de données et j'ai été surpris du nombre de bases où les mots de passe sont stockés en clair ou avec des algos dépassés (MD5, SHA1). En PHP, <code>password_hash()</code> fait le boulot tout seul. Sur Websciences, je l'utilise systématiquement.</p>
 
-      <p><strong>Les sessions.</strong> J'ai consacré du temps à comprendre le fonctionnement réel de <code>$_SESSION</code> en PHP, le rôle des cookies, et les protections contre la fixation et le vol de session (régénération de l'identifiant à la connexion, attribut <code>HttpOnly</code>, expiration). C'est un domaine où l'on peut écrire du code qui « marche » en apparence sans avoir mis en place les protections de base.</p>
+      <p><strong>Les sessions.</strong> J'ai pris du temps pour comprendre comment fonctionne <code>$_SESSION</code> en PHP, le rôle des cookies, et les protections contre le vol de session (régénérer l'identifiant à la connexion, mettre l'attribut <code>HttpOnly</code> sur les cookies, prévoir une expiration). C'est un domaine où le code peut sembler fonctionner sans avoir les bonnes protections.</p>
 
-      <h2>Impact concret sur mon travail</h2>
+      <h2>Application concrète sur Websciences</h2>
 
-      <p>La veille n'est pas une activité décorative. Sur Websciences, elle a directement orienté plusieurs choix :</p>
+      <p>Quand est venu le moment de développer Websciences, cette veille m'a permis de mettre en place les bonnes pratiques sans hésiter :</p>
 
       <div class="info-box">
-        <div class="info-box-title">PDO avec requêtes préparées partout</div>
-        <p style="margin: 0;">Aucune concaténation directe de variables dans une requête SQL — chaque valeur passe par un paramètre nommé. C'est une décision prise en amont, pas un correctif après-coup.</p>
+        <div class="info-box-title">Requêtes préparées partout</div>
+        <p style="margin: 0;">Avec PDO, je n'ai jamais collé directement une variable dans une requête SQL. À la place, chaque valeur passe par un paramètre. Ce choix a été pris dès le début, pas en correctif.</p>
       </div>
 
       <div class="info-box">
         <div class="info-box-title">password_hash et password_verify</div>
-        <p style="margin: 0;">Les mots de passe ne sont jamais stockés ni comparés en clair. Le hachage utilise l'algorithme bcrypt par défaut de PHP, avec un coût adapté.</p>
+        <p style="margin: 0;">Les mots de passe ne sont jamais stockés en clair. PHP s'occupe du hachage automatiquement, avec l'algorithme bcrypt qui est solide.</p>
       </div>
 
       <div class="info-box">
-        <div class="info-box-title">Contrôle d'accès côté serveur uniquement</div>
-        <p style="margin: 0;">Les ressources premium ne sont servies au navigateur que si le serveur, après vérification de la session, valide le rôle de l'utilisateur. Aucun contrôle ne dépend du JavaScript ou d'un paramètre côté client manipulable.</p>
+        <div class="info-box-title">Contrôle d'accès uniquement côté serveur</div>
+        <p style="margin: 0;">Pour les ressources réservées aux abonnés, c'est PHP qui décide si on peut y accéder ou non, jamais le JavaScript. Comme ça, un utilisateur ne peut pas contourner la limite en bidouillant le code de la page dans son navigateur.</p>
       </div>
 
-      <h2>Perspective</h2>
+      <h2>Pour la suite</h2>
 
-      <p>Cette veille m'a fait prendre conscience que la sécurité applicative est un domaine où le développeur a une <strong>vraie responsabilité morale</strong> : derrière chaque base de données il y a des personnes réelles dont les informations peuvent fuiter, être exploitées, ou nuire. Ce qui pourrait être perçu comme une contrainte technique est en réalité un <strong>devoir professionnel</strong>, et c'est sous cet angle que j'aborde désormais mes choix de conception.</p>
+      <p>Ce que cette veille m'a appris, c'est que la sécurité n'est pas qu'une question technique : derrière les bases de données, il y a de vraies personnes dont les informations peuvent être volées et utilisées contre elles. Je vois ça maintenant comme une <strong>responsabilité du développeur</strong>, pas comme une contrainte.</p>
 
-      <p>Pour la suite de mon parcours, je compte élargir ma veille à deux sujets connexes : les <strong>en-têtes de sécurité HTTP</strong> (Content-Security-Policy, Strict-Transport-Security…) et la <strong>conteneurisation</strong> (Docker), qui change la manière dont on isole les composants d'une application en production.</p>
+      <p>Pour la suite, j'aimerais élargir ma veille à deux sujets : les <strong>en-têtes de sécurité HTTP</strong> (Content-Security-Policy par exemple) et la <strong>conteneurisation</strong> avec Docker.</p>
 
     </div>
   </div>
