@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arthur-lecomte.github.io/portfolio-bts-sio/sitemap.xml
