@@ -83,5 +83,6 @@ Enseignante référente : Mme Anita Guatteri.
 
 ## Technologies utilisées
 
-Site statique HTML5 / CSS3 / JavaScript vanilla, sans framework, sans étape de build.
-Hébergement : GitHub Pages.
+Ce portfolio est un **support de soutenance** conçu pour présenter mes deux situations professionnelles. La réalisation technique principale présentée est la **plateforme Websciences** (situation 2) : architecture MVC PHP/MySQL, génération PDF Python/ReportLab, sécurité applicative.
+
+Le portfolio en lui-même est un site statique (HTML5, CSS3, JavaScript), hébergé sur GitHub Pages.
