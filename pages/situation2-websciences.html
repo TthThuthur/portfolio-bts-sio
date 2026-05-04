@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Situation 2 · Websciences — Portfolio Arthur LECOMTE</title>
+  <meta name="description" content="Situation 2 — Conception et développement de la plateforme web Websciences en architecture MVC PHP/MySQL avec accès différencié et génération PDF.">
+  <meta name="author" content="Arthur LECOMTE">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stage 2 · Websciences — Portfolio Arthur LECOMTE">
+  <meta property="og:description" content="Situation 2 — Conception et développement de la plateforme web Websciences en architecture MVC PHP/MySQL avec accès différencié et génération PDF.">
+  <meta property="og:image" content="../assets/arthur-avatar.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-text">Portfolio</span>
+      <span class="logo-dot"></span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="competences.html">Compétences</a>
+      <a href="situations.html" class="active">Situations pro</a>
+      <a href="tableau-synthese.html">Tableau de synthèse</a>
+      <a href="attestations.html">Documents</a>
+      <a href="veille.html">Veille</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="situations.html">Situations pro</a><span class="sep">/</span>
+      Stage 2 · Websciences
+    </div>
+    <h1 class="page-title">Plateforme <em>Websciences</em></h1>
+    <p class="page-subtitle">Concevoir et développer une plateforme web complète de ressources pédagogiques en architecture MVC PHP/MySQL — du modèle de données au déploiement local.</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container container-narrow">
+
+    <!-- Méta-données -->
+    <div class="situation-meta">
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Période</div>
+        <div class="situation-meta-value">19/01 — 13/03/2026</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Durée</div>
+        <div class="situation-meta-value">8 semaines</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Modalité</div>
+        <div class="situation-meta-value">Seul</div>
+      </div>
+      <div class="situation-meta-item">
+        <div class="situation-meta-label">Lieu</div>
+        <div class="situation-meta-value">Mention TB · Nevers</div>
+      </div>
+    </div>
+
+    <div class="prose">
+
+      <div class="partner-bar">
+        <img src="../assets/logo-mention-tb.png" alt="Logo Mention TB">
+        <div class="partner-bar-text">
+          <span class="partner-bar-label">Organisme d'accueil</span>
+          <span class="partner-bar-name">Mention TB</span>
+          <span class="partner-bar-meta">29 bis, Boulevard Maréchal Juin · 58000 Nevers<br>SIRET 804 090 496 00022 · Tuteur de stage : Thibaut Berdagué-Coutelier (gérant)<br>Enseignante référente : Anita Guatteri</span>
+        </div>
+      </div>
+
+      <h2>Contexte et besoins</h2>
+      <p>Pendant ma première année, j'avais déjà mis en place un serveur Discord pour Mention TB. Mais Discord, c'est bien pour discuter et s'entraider, ce n'est pas fait pour ranger et retrouver des ressources pédagogiques. Les fiches de cours et d'exercices continuaient à circuler comme des pièces jointes, sans aucun classement.</p>
+
+      <p>L'agence voulait donc un <strong>site web dédié</strong>, sur lequel les enseignants pourraient mettre en ligne leurs ressources, organisées par niveau (Collège, Seconde, Première, Terminale) et par matière (Maths, Physique, Chimie). L'idée était aussi de proposer un <strong>abonnement à 7 € par mois</strong> pour accéder aux corrigés et télécharger les fiches en PDF.</p>
+
+      <p>Voici le cahier des charges qu'on a validé ensemble avec mon tuteur :</p>
+
+      <blockquote>
+        Construire un site web qui met à disposition cours, exercices et corrigés en maths et physique-chimie pour les niveaux Seconde, Première et Terminale, avec un accès gratuit aux cours et exercices et un accès payant aux corrigés et aux téléchargements.
+      </blockquote>
+
+      <h2>Choix techniques</h2>
+
+      <p>Avant de me lancer, j'ai discuté des choix techniques avec mon tuteur. Vu le contexte (petite agence, stagiaire, deux mois), il fallait rester sur des technos simples et maintenables.</p>
+
+      <div class="tech-stack">
+        <span class="tech tech-primary">PHP 8</span>
+        <span class="tech tech-primary">MySQL 8</span>
+        <span class="tech tech-primary">Architecture MVC</span>
+        <span class="tech">HTML 5</span>
+        <span class="tech">CSS 3</span>
+        <span class="tech">JavaScript</span>
+        <span class="tech">Apache (Laragon)</span>
+        <span class="tech">.htaccess</span>
+        <span class="tech">Python 3</span>
+        <span class="tech">ReportLab</span>
+        <span class="tech">Git</span>
+        <span class="tech">VS Code</span>
+      </div>
+
+      <h3>PHP plutôt qu'un framework</h3>
+      <p>En BTS SIO, on apprend PHP en programmation orientée objet, mais pas de framework comme Symfony ou Laravel. J'ai donc choisi de construire une <strong>architecture MVC en PHP « pur »</strong>, sans framework. C'est plus formateur (on comprend mieux comment ça marche), et ça reste à la portée de quelqu'un qui aurait à reprendre le projet plus tard.</p>
+
+      <h3>MySQL pour la base de données</h3>
+      <p>MySQL est la base de données qu'on a vue en BTS. Côté code, j'utilise <strong>PDO</strong>, l'outil PHP standard pour parler à MySQL, en passant uniquement par des <strong>requêtes préparées</strong>. C'est ce qui permet d'éviter les injections SQL (j'en parle plus dans la section sécurité plus bas).</p>
+
+      <h3>Laragon comme environnement local</h3>
+      <p>Je développe et fais tourner le site sur <strong>Laragon</strong>, qui installe Apache, PHP et MySQL d'un coup sur Windows. C'est plus simple qu'installer chaque composant séparément. La mise en ligne sur un vrai hébergeur n'était pas au programme du stage, ce sera une étape pour plus tard.</p>
+
+      <h2>Modèle de données</h2>
+
+      <p>La base contient quatre tables principales :</p>
+
+      <div class="schema-box">
+        <svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" style="background: #0d0d12;">
+          <defs>
+            <style>
+              .tbl-head { fill: #1a1a20; stroke: #d4a84b; stroke-width: 1; }
+              .tbl-body { fill: #14141a; stroke: #2a2a35; stroke-width: 1; }
+              .tbl-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; fill: #d4a84b; font-weight: 600; }
+              .col { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #e8e6df; }
+              .col-pk { fill: #f0c674; }
+              .col-fk { fill: #b8b6ae; font-style: italic; }
+              .rel { stroke: #d4a84b; stroke-width: 1.2; fill: none; }
+              .rel-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #b8b6ae; }
+            </style>
+          </defs>
+
+          <!-- USERS -->
+          <rect x="20" y="20" width="180" height="32" class="tbl-head" />
+          <text x="110" y="42" text-anchor="middle" class="tbl-name">users</text>
+          <rect x="20" y="52" width="180" height="138" class="tbl-body" />
+          <text x="32" y="74" class="col col-pk">🔑 id (PK)</text>
+          <text x="32" y="94" class="col">email</text>
+          <text x="32" y="114" class="col">password (bcrypt)</text>
+          <text x="32" y="134" class="col">role ENUM</text>
+          <text x="32" y="154" class="col">created_at</text>
+          <text x="32" y="174" class="col">last_login</text>
+
+          <!-- LEVELS -->
+          <rect x="260" y="20" width="180" height="32" class="tbl-head" />
+          <text x="350" y="42" text-anchor="middle" class="tbl-name">levels</text>
+          <rect x="260" y="52" width="180" height="98" class="tbl-body" />
+          <text x="272" y="74" class="col col-pk">🔑 id (PK)</text>
+          <text x="272" y="94" class="col">code (6e, 5e, 2nde…)</text>
+          <text x="272" y="114" class="col">label</text>
+          <text x="272" y="134" class="col">order_index</text>
+
+          <!-- CHAPTERS -->
+          <rect x="500" y="20" width="180" height="32" class="tbl-head" />
+          <text x="590" y="42" text-anchor="middle" class="tbl-name">chapters</text>
+          <rect x="500" y="52" width="180" height="118" class="tbl-body" />
+          <text x="512" y="74" class="col col-pk">🔑 id (PK)</text>
+          <text x="512" y="94" class="col col-fk">level_id (FK)</text>
+          <text x="512" y="114" class="col">title</text>
+          <text x="512" y="134" class="col">summary</text>
+          <text x="512" y="154" class="col">order_index</text>
+
+          <!-- RESOURCES -->
+          <rect x="260" y="270" width="180" height="32" class="tbl-head" />
+          <text x="350" y="292" text-anchor="middle" class="tbl-name">resources</text>
+          <rect x="260" y="302" width="180" height="138" class="tbl-body" />
+          <text x="272" y="324" class="col col-pk">🔑 id (PK)</text>
+          <text x="272" y="344" class="col col-fk">chapter_id (FK)</text>
+          <text x="272" y="364" class="col">type ENUM (cours…)</text>
+          <text x="272" y="384" class="col">subject</text>
+          <text x="272" y="404" class="col">access (free/sub)</text>
+          <text x="272" y="424" class="col">pdf_path</text>
+
+          <!-- Relations -->
+          <line x1="200" y1="80" x2="260" y2="80" class="rel" />
+          <text x="208" y="74" class="rel-label">— consulte</text>
+
+          <line x1="440" y1="80" x2="500" y2="80" class="rel" />
+          <text x="448" y="74" class="rel-label">1 — n</text>
+
+          <line x1="590" y1="170" x2="590" y2="220" class="rel" />
+          <line x1="590" y1="220" x2="350" y2="220" class="rel" />
+          <line x1="350" y1="220" x2="350" y2="270" class="rel" />
+          <text x="446" y="216" text-anchor="middle" class="rel-label">1 chapitre — n ressources</text>
+        </svg>
+        <div class="schema-caption">Modèle relationnel de la base Websciences : niveaux, chapitres, ressources, utilisateurs.</div>
+      </div>
+
+      <h2>Architecture MVC</h2>
+
+      <p>L'architecture suit une <strong>séparation stricte</strong> des trois couches Modèle / Vue / Contrôleur, complétée par un répertoire <code>core/</code> pour les classes utilitaires (connexion à la base de données, routeur, contrôleur abstrait, gestion des sessions) et un répertoire <code>config/</code> pour la configuration et les scripts SQL.</p>
+
+      <p>Voici la structure de répertoires retenue :</p>
+
+      <pre class="code-block"><span class="com">/websciences</span>
+├── public/
+│   ├── index.php          <span class="com">// point d'entrée unique</span>
+│   ├── .htaccess          <span class="com">// réécriture des URL</span>
+│   ├── css/
+│   ├── js/
+│   └── pdfs/              <span class="com">// fiches générées</span>
+├── config/
+│   ├── config.php
+│   └── schema.sql
+├── core/
+│   ├── Database.php       <span class="com">// connexion PDO mutualisée</span>
+│   ├── Router.php         <span class="com">// routage des URL propres</span>
+│   ├── Controller.php     <span class="com">// classe contrôleur abstraite</span>
+│   └── Auth.php           <span class="com">// gestion des sessions</span>
+├── model/
+│   ├── User.php           <span class="com">// entités métier</span>
+│   └── UserRepository.php <span class="com">// accès aux données</span>
+├── controller/
+├── view/
+│   ├── layouts/
+│   ├── pages/
+│   └── components/
+└── README.md</pre>
+
+      <h3>Le routage des URL</h3>
+      <p>Toutes les requêtes du site passent par <code>public/index.php</code> grâce à une règle dans le fichier <code>.htaccess</code> qui réécrit les URL. Par exemple, quand un élève arrive sur <code>/cours/seconde/fonctions</code>, le code regarde l'URL et appelle le bon contrôleur avec les bons paramètres. L'avantage, c'est d'avoir des URL <strong>lisibles</strong> (mieux pour les utilisateurs et pour Google), au lieu d'URL du genre <code>?page=cours&amp;id=42</code>.</p>
+
+      <h3>Le pattern Repository</h3>
+      <p>Toutes les requêtes SQL sont regroupées dans des classes <strong>Repository</strong>, plutôt que dispersées un peu partout dans le code. Pour chaque table (User, Resource, Chapter), il y a une classe <strong>entité</strong> qui représente les données et une classe <strong>repository</strong> qui contient les méthodes pour les chercher, les ajouter ou les modifier en base.</p>
+
+      <h2>Quelques extraits de code</h2>
+
+      <p>Voici deux extraits qui illustrent le fonctionnement de la plateforme.</p>
+
+      <h3>Extrait CSS — Variables de la charte graphique</h3>
+
+      <p>Toutes les couleurs et polices du site sont définies une seule fois dans des <strong>variables CSS</strong>, en haut de la feuille de style. C'est ce qui permet d'avoir une charte cohérente sur toutes les pages : si on veut changer la couleur dorée, on la modifie une seule fois et ça se répercute partout.</p>
+
+      <pre class="code-block"><span class="com">/* style.css — palette et typographie de la plateforme */</span>
+:root {
+    <span class="com">/* Couleurs */</span>
+    --bg-deep:    #0a0a0c;     <span class="com">/* fond principal */</span>
+    --bg-card:    #1a1a20;     <span class="com">/* fond des cartes  */</span>
+    --gold:       #d4a84b;     <span class="com">/* doré principal  */</span>
+    --gold-soft:  rgba(212, 168, 75, 0.12);
+    --text:       #e8e6df;     <span class="com">/* texte principal */</span>
+    --text-soft:  #b8b6ae;     <span class="com">/* texte secondaire */</span>
+
+    <span class="com">/* Polices */</span>
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans:  'Outfit', sans-serif;
+}
+
+<span class="com">/* Utilisation : on appelle les variables avec var() */</span>
+.bouton-or {
+    background: <span class="kw">var</span>(--gold);
+    color: <span class="kw">var</span>(--bg-deep);
+    font-family: <span class="kw">var</span>(--font-sans);
+}</pre>
+
+      <h3>Extrait PHP — Vérification du mot de passe à la connexion</h3>
+
+      <p>Quand un utilisateur se connecte, son mot de passe ne doit jamais être comparé en clair avec ce qui est en base. PHP fournit deux fonctions standards : <code>password_hash()</code> pour stocker le mot de passe (lors de l'inscription) et <code>password_verify()</code> pour vérifier qu'un mot de passe saisi correspond bien à ce qui est stocké.</p>
+
+      <pre class="code-block"><span class="com">// AuthController.php — extrait de la fonction de connexion</span>
+<span class="kw">public function</span> <span class="fn">login</span>($email, $motDePasse) {
+    <span class="com">// On va chercher l'utilisateur par son email</span>
+    $sql = <span class="str">"SELECT * FROM users WHERE email = :email"</span>;
+    $stmt = $this->db-&gt;<span class="fn">prepare</span>($sql);
+    $stmt-&gt;<span class="fn">execute</span>([<span class="str">':email'</span> =&gt; $email]);
+    $user = $stmt-&gt;<span class="fn">fetch</span>();
+
+    <span class="com">// On vérifie que le mot de passe correspond</span>
+    <span class="kw">if</span> ($user &amp;&amp; <span class="fn">password_verify</span>($motDePasse, $user[<span class="str">'password'</span>])) {
+        $_SESSION[<span class="str">'user_id'</span>] = $user[<span class="str">'id'</span>];
+        <span class="kw">return true</span>;
+    }
+    <span class="kw">return false</span>;
+}</pre>
+
+      <h2>Sécurité applicative</h2>
+
+      <p>J'ai pris en compte la sécurité dès le début du projet, parce que c'est aussi le sujet de ma veille technologique. Trois choses à retenir :</p>
+
+      <ol>
+        <li><strong>Requêtes préparées partout.</strong> Comme dans l'extrait ci-dessus, on ne met jamais une variable directement dans une requête SQL. À la place, on utilise un paramètre (<code>:email</code>) qui est ensuite remplacé proprement. C'est ce qui empêche les <strong>injections SQL</strong>, une des attaques les plus courantes sur le web.</li>
+        <li><strong>Mots de passe hachés.</strong> Les mots de passe ne sont jamais stockés en clair. <code>password_hash()</code> les transforme en une suite de caractères impossible à inverser, et <code>password_verify()</code> permet de comparer sans avoir à connaître le mot de passe d'origine.</li>
+        <li><strong>Contrôle d'accès côté serveur.</strong> Pour les corrigés (réservés aux abonnés), la vérification se fait dans le contrôleur PHP, pas en JavaScript dans le navigateur. Ça évite qu'un utilisateur puisse contourner la limite en bidouillant le code de la page.</li>
+      </ol>
+
+      <h2>Génération automatique des fiches PDF</h2>
+
+      <p>Particularité du projet : les fiches pédagogiques (cours, exercices, corrigés) sont <strong>générées automatiquement</strong> par un script Python qui utilise la bibliothèque <strong>ReportLab</strong>. Ça permet d'avoir des PDF à la mise en page identique d'une fiche à l'autre : même police, mêmes couleurs, même en-tête, même pied de page.</p>
+
+      <p>Les PDF générés sont enregistrés dans <code>public/pdfs/</code>, et la base de données ne stocke que le chemin du fichier (dans la colonne <code>pdf_path</code> de la table <code>resources</code>). Comme ça, on sépare bien les <strong>métadonnées</strong> (titre, niveau, matière) du <strong>fichier lui-même</strong>, ce qui est plus propre.</p>
+
+      <p>ReportLab n'est pas au programme du BTS, j'ai dû me former dessus tout seul. C'était plutôt formateur même si la documentation n'est pas toujours évidente, surtout pour afficher des symboles mathématiques (ℕ, ℤ, ℚ, ℝ) ou des fractions verticales.</p>
+
+      <h2>Recette et tests</h2>
+
+      <p>Avant de livrer, j'ai testé tous les parcours utilisateurs principaux :</p>
+      <ul>
+        <li>Inscription d'un nouvel utilisateur (avec validation de l'email et d'un mot de passe assez robuste)</li>
+        <li>Connexion et déconnexion, et le fait que la session reste active entre deux pages</li>
+        <li>Navigation par niveau, par matière, par chapitre</li>
+        <li>Accès libre à un cours, accès libre à un exercice</li>
+        <li>Tentative d'accès à un corrigé sans abonnement → redirection vers la page d'abonnement</li>
+        <li>Accès à un corrigé avec un compte abonné</li>
+        <li>Téléchargement d'un PDF</li>
+      </ul>
+
+      <p>J'ai testé chaque cas à la main et noté le résultat dans un tableau (résultat attendu / résultat observé). Quand il y avait un écart, je corrigeais le code avant de continuer.</p>
+
+      <h2>Difficultés rencontrées</h2>
+
+      <h3>Le routage des URL sans framework</h3>
+      <p>La grosse difficulté technique a été de faire fonctionner les <strong>URL propres</strong>. Sans framework, il faut comprendre toute la chaîne : la requête arrive sur Apache, qui regarde le fichier <code>.htaccess</code>, qui redirige vers <code>index.php</code>, qui ensuite analyse l'URL pour appeler le bon contrôleur. Au début, ça ne marchait pas parce que j'avais oublié d'activer le module <code>mod_rewrite</code> dans Apache (il est désactivé par défaut). La documentation Apache et plusieurs heures de tests m'ont permis de comprendre.</p>
+
+      <h3>L'apprentissage de ReportLab</h3>
+      <p>ReportLab est puissant mais sa documentation n'est pas toujours claire pour les cas un peu avancés. Pour afficher des symboles mathématiques ou des fractions, j'ai dû tâtonner et tester beaucoup de choses avant de trouver des solutions qui marchent.</p>
+
+      <h3>Garder une charte cohérente entre site et PDF</h3>
+      <p>Pour que le site et les PDF aient le même look, j'ai défini une charte commune (mêmes couleurs noir/or, mêmes polices, mêmes en-têtes) et je l'ai appliquée des deux côtés.</p>
+
+      <h2>Bilan</h2>
+
+      <p>Au bout des huit semaines, la plateforme Websciences <strong>fonctionne en local</strong> sur le périmètre prévu pour le stage. Les chapitres du niveau Seconde sont les plus avancés et servent de jeu de référence ; ceux de Première et Terminale continuent à être rédigés par les profs après mon stage.</p>
+
+      <p>Ce stage m'a beaucoup apporté :</p>
+      <ul>
+        <li>Une <strong>vraie compréhension du MVC</strong>, parce que je l'ai construit moi-même au lieu d'utiliser un framework qui le cache</li>
+        <li>De l'<strong>autonomie</strong> sur des sujets pas vus en cours (ReportLab, configuration d'Apache)</li>
+        <li>Une <strong>vraie attention à la sécurité</strong>, qui n'est pas juste un détail mais quelque chose à intégrer dès le début</li>
+      </ul>
+
+      <!-- Compétences mobilisées -->
+      <div class="compet-mobilisees">
+        <h2>Compétences mobilisées</h2>
+        <div class="compet-grid">
+          <div class="compet-item">
+            <div class="compet-code">A1.1</div>
+            <div class="compet-text">Recenser et identifier les ressources numériques</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A1.2</div>
+            <div class="compet-text">Mettre en place et vérifier les niveaux d'habilitation associés à un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A1.3</div>
+            <div class="compet-text">Vérifier les conditions de la continuité d'un service informatique</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A2.2</div>
+            <div class="compet-text">Traiter des demandes concernant les applications</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A3.1</div>
+            <div class="compet-text">Participer à la valorisation de l'image de l'organisation</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A3.2</div>
+            <div class="compet-text">Référencer les services en ligne et mesurer leur visibilité</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A3.3</div>
+            <div class="compet-text">Participer à l'évolution d'un site web exploitant les données</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A4.1</div>
+            <div class="compet-text">Analyser les objectifs et les modalités d'organisation d'un projet</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A4.2</div>
+            <div class="compet-text">Planifier les activités</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A4.3</div>
+            <div class="compet-text">Évaluer les indicateurs de suivi d'un projet et analyser les écarts</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.1</div>
+            <div class="compet-text">Réaliser les tests d'intégration et d'acceptation</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.2</div>
+            <div class="compet-text">Déployer un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A5.3</div>
+            <div class="compet-text">Accompagner les utilisateurs dans la mise en place d'un service</div>
+          </div>
+          <div class="compet-item">
+            <div class="compet-code">A6.2</div>
+            <div class="compet-text">Mettre en œuvre des outils et stratégies de veille informationnelle</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Document joint -->
+      <div style="margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--border);">
+        <h2 style="font-family:var(--font-serif);font-size:28px;margin-bottom: 20px;">Document joint</h2>
+        <a href="../attestations/attestation-stage2-websciences.pdf" target="_blank" rel="noopener" class="attestation-card" style="max-width:480px;">
+          <span class="attestation-icon">📄</span>
+          <span class="attestation-info">
+            <span class="attestation-title">Attestation de stage signée</span>
+            <span class="attestation-meta">PDF · Mention TB · Signée le 17/03/2026</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Navigation entre situations -->
+      <div class="situation-nav">
+        <a href="situation1-discord.html" class="nav-prev">
+          <div class="nav-label">← Situation précédente</div>
+          <div class="nav-title">Serveur Discord Mention TB</div>
+        </a>
+        <a href="situations.html" class="nav-next">
+          <div class="nav-label">Retour →</div>
+          <div class="nav-title">Toutes les situations</div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Arthur LECOMTE</span>
+      <span class="footer-tag">Portfolio BTS SIO · Session 2026</span>
+    </div>
+    <div class="footer-partner">
+      <span>Stages effectués au sein de</span>
+      <img src="../assets/logo-mention-tb.png" alt="Mention TB">
+    </div>
+    <div class="footer-meta">
+      <span>Lycée Raoul Follereau · Nevers</span>
+      <span>Épreuve E5 — CCF</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
